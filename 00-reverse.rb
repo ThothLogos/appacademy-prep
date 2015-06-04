@@ -7,12 +7,15 @@
 
 def reverse(string)
 
+  # Empty array
   result = []
 
+  # Iterate through each character in the input string
   string.each_char do |char|
-    result.unshift(char)
+    result.unshift(char) # To reverse, force each char to the front
   end
 
+  # Return the array compressed back into a string
   return result.join("")
 end
 

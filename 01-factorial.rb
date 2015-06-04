@@ -7,6 +7,7 @@
 
 def factorial(n)
   
+  # Small input error check
   if n < 0
     puts "Cannot perform factorial on negative values."
     return
@@ -14,8 +15,9 @@ def factorial(n)
 
   result = 1
 
+  # Iterate n down to 1 from the input
   while n > 0
-    result = result * n 
+    result = result * n # Update the result with each new multiplication value
     n = n - 1
   end
 
