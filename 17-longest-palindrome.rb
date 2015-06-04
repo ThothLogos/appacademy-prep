@@ -48,6 +48,7 @@ def longest_palindrome(string)
       longest = back_section if back_section.length > longest.length
     end
 
+    # Nested loop to grab the middle sections
     for k in 0...string.length do
       mid_section = string.slice(k, i)
       if palindrome?(mid_section)
