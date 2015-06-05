@@ -6,16 +6,18 @@
 
 def greatest_common_factor(number1, number2)
 
-  divisor = 0
-
+  # Compare the incoming values to find the smaller of the two - the greatest
+  # common factor cannot be larger than the smaller of the two, so this will be
+  # our maximal constraint.
   number1 < number2 ? smallest = number1 : smallest = number2
 
+  # Check every integer between 1 and the maximal constraint
   for i in 1..smallest do
-    divisor = i if number1 % i == 0 && number2 % i == 0
+    # If both numbers leave no remainder, we have a common factor
+    factor = i if number1 % i == 0 && number2 % i == 0
   end
 
-  return divisor
-
+  return factor
 end
 
 # These are tests to check that your code is working. After writing
